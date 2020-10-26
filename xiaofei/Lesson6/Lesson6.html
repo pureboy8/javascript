@@ -1,0 +1,63 @@
+<!-- 查找HTML元素、改变HTML和CSS、HTML事件 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>程序员小飞 JavaScript第六课</title>
+	<script type="text/javascript" src = "Lesson6.js"></script>
+	<style>
+		#myDiv,#myDiv2,#myDiv3{
+			background-color: coral;
+			border: 1px solid;
+			padding: 50px;
+		}
+
+	</style>
+</head>
+<body onload="showLoadMessage()">
+<!-- <body> -->
+	<h1>1.查找HTML元素</h1>
+	<p>1.1 通过id查找</p>
+	<p id="name">程序员小飞</p>
+	<button onclick="GetElementById()">获得Id为name的值</button>
+	<p id = "nameCopy"></p>
+	<h1>1.2 通过标签名查找</h1>
+	<div id = "main">
+		<p>小飞在p标签里</p>
+	</div>
+	<button onclick="GetElementsByTag()">通过标签名查找</button>
+	<p id = "tagCopy"></p>
+	<h1>1.3 通过类名查找</h1>
+	<p class="intro">程序员小飞的类</p>
+	<button onclick="GetElementsByClass()">通过类名获得</button>
+	<p id = "classCopy"></p>
+	<h1>2.改变HTML</h1>
+	<p>2.1 用innerHTML改变HTML内容</p>
+	<p>2.2 改变属性</p>
+	<img id="image" src="lakeandman.jpg" width = "160" height="120">
+	<button onClick = "ChangeImage()">修改图片</button>
+	<h1>3.改变CSS</h1>
+	<p id = "p1">Hello World!</p>
+	<p id = "p2">Hello World!</p>
+	<button onclick="ChangeCss()">修改样式</button>
+	<h1>4.HTML DOM事件</h1>
+	<img src="bulboff.gif" id = "myImage" onmousedown="lighton()" onmouseup="lightoff()">
+	<p>点击不释放鼠标灯将一直亮着</p>
+	<p onmouseover="ChangeColorOn()" id = "colorText" onmouseout="ChangeColorOff()">将鼠标移至文本上</p>
+	<h1>5.EventListener</h1>
+	<p>演示了在添加不同事件监听时，冒泡与捕获的不同</p>
+	<div id = "myDiv">
+		<p id = "myP">点击段落，我是冒泡</p>
+	</div>
+	<br>
+	<div id="myDiv2">
+		<p id="myP2">点击段落，我是捕获</p>
+	</div>
+	<br>
+	<div id = "myDiv3">
+		div 元素添加了onmousemove事件，鼠标在橘红色的框内移动时会显示随机数
+		<p>点击按钮移除div的事件</p>
+		<button onclick="RemoveHandler()">移除事件</button>
+		<p id = "randomNum"></p>
+	</div>
+</body>
+</html>

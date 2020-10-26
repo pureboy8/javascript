@@ -1,0 +1,28 @@
+<!-- 添加和移除HTML节点、替换HTML元素和DOM集合 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>程序员小飞 JavaScript第七课</title>
+	<script type="text/javascript" src = "Lesson7.js"></script>
+</head>
+<body>
+	<h1>1.添加HTML DOM节点</h1>
+	<div id = "div1">
+		<p id = "p1">这是一个段落</p>
+		<p id = "p2"> 这是另外一个段落</p>
+		<button onclick="AppendOnePara()">在最后增加一个段落</button>
+		<button onclick="InsertBeforePara()">在最前面增加一个段落</button>
+
+	</div>
+	<h1>2.移除HTML DOM节点</h1>
+	<button onclick="RemovePara()">移除新添加的段落</button>
+	<h1>3.替换HTML元素</h1>
+	<button onclick="ReplacePara()">把p1替换</button>
+	<h1>4.HTML DOM集合</h1>
+	<button onclick="GetPCount()">得到段落的数量</button>
+	<button onclick="ChangePColor()">修改段落颜色</button>
+	<p id = "pCount"></p>
+
+
+</body>
+</html>

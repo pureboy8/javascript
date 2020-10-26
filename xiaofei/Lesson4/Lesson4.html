@@ -1,0 +1,48 @@
+<!-- typeof函数、类型转换、错误提示和使用误区 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>程序员小飞 JavaScript第四课</title>
+	<script type="text/javascript" src = "Lesson4.js"></script>
+</head>
+<body>
+	<h1>1.typeof得到类型</h1>
+	<p>可以通过typeof来得到对象的类型</p>
+	<p>typeof("John"),typeof({name:"程序员小飞",age:28})</p>
+	<h1>2.类型转换</h1>
+	<p>2.1 数字转换为字符串</p>
+	<p>String(123)</p>
+	<p>(123).toString()</p>
+	<p>2.2 布尔值转换为字符串</p>
+	<p>String(true)</p>
+	<p>false.toString()</p>
+	<p>2.3 日期转换为字符串</p>
+	<p> String(new Date())</p>
+	<p>2.4 字符串转换为数字</p>
+	<p>Number("3.14"),Number(" "),Number("99 88")</p>
+	<p>2.5 将布尔值转换为数字</p>
+	<p>Number(false),Number(true)</p>
+	<p>2.6 将日期转换为数字</p>
+	<p>Number(new Date())</p>
+	<h1>3.JavaScript 错误</h1>
+	<p>不管输入是否正确，输入框都会输入后清空</p>
+	<p>请输入5~10之间的数字:</p>
+	<input id="demo" type="text">
+	<button onclick = "TryFunction()">提交</button>
+	<p id = "p01"></p>
+	<h1>4.使用误区</h1>
+	<p>4.1 赋值运算符应用错误</p>
+	<p>if(x == 10) 不能写成 if(x=10)</p>
+	<p>4.2 加法和连接</p>
+	<p>var x = 10 + 5</p>
+	<p>var y = "10" + 5</p>
+	<p>4.3 字符串换行</p>
+	<p>var x = "Hello \<br> World" 需要加\</p>
+	<p>4.4 return语句</p>
+	<p id = "returnType"></p>
+	<button onclick = "ShowReturnMistake()">显示返回结果类型</button>
+	<p>4.5 Undefined 不是 Null</p>
+	<p>Undefined 表示未被定义；对象只有被定义才有可能是Null</p>
+	<p>if(typeof(myObj) != "undefined") && myobj != null)</p>
+</body>
+</html>

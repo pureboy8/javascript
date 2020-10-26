@@ -1,0 +1,59 @@
+<!-- 事件、字符串、运算符、If、Switch、For和While语句和break及continue -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>程序员小飞 JavaScript第三课</title>
+	<script type="text/javascript" src="Lesson3.js"></script>
+</head>
+<body>
+	<h1>1.事件</h1>
+	<p> 事件就是发在HTML元素上的事情</p>
+	<p id = "time"></p>
+	<button onclick="OnClickBtnEvent()">点击事件，显示当前时间</button>
+	<p>事件主要包括：onChange、onClick、onmouseover、onmouseout、onkeydown、onload等</p>
+	<h2>2.字符串</h2>
+	<p>字符串就是用单引号或者双引号包裹的一段字符</p>
+	<p> var carname = "Volvo XC60"</p>
+	<p>通过索引拿到相关的字符，从0开始</p>
+	<p> var character = carname[6]</p>
+	<p>转义符</p>
+	<p> var x = 'It\'s alright';</p>
+	<p>获得字符串长度</p>
+	<p> var len = x.length;</p>
+	<h2>3.运算符</h2>
+	<p>3.1 算术运算符</p>
+	<p>2+3,3-2,2 * 5,5/2,5%2,x++,x--</p>
+	<p> "what a very " + "nice day"</p>
+	<p> "Hello" + 5</p>
+	<p>3.2 赋值运算符</p>
+	<p>x = 5,x += 5, x -= 5,x *= 5,x /= 5, x%=5</p>
+	<p>3.3 比较运算符</p>
+	<p>8 == 5, 8 ！= 5, 8 > 5,8 < 5, 8 >= 5, 8 <= 5</p>
+	<p>3.4 逻辑运算符</p>
+	<p> 8 < 10 && 8 > 1 </p>
+	<p> 11 < 10 || 11 > 1</p>
+	<p> !(8 < 10)</p>
+	<p>3.5 条件运算符</p>
+	<p>var voteable = (age < 18)?"年龄太小":"年龄已经达到";</p>
+
+	<h1>4.If语句</h1>
+	<p id = "sayHi"></p>
+	<button onclick="SayHi(9)">问候</button>
+	<h1>5.Switch语句</h1>
+	<p id = "showDay"></p>
+	<button onclick = "ShowDay()" >今天是周几</button>
+	<h1>6.For语句</h1>
+	<p id = "forLoop"></p>
+	<button onclick="ShowNum()">显示1到100的数字</button>
+	<p id = "forIn"></p>
+	<button onClick="ShowName()">显示所有名字</button>
+	<h1>7.While语句</h1>
+	<p id = "whileLoop"></p>
+	<button onclick="ShowNumWhile()">while版的显示1到100的数字</button>
+	<h1>8.break和continue</h1>
+	<p id = "break"></p>
+	<button onclick="ShowNumBreak(6)">显示1到10的数字，>6不现实</button>
+	<p id = "continue"></p>
+	<button onclick="ShowNumContinue(6)">显示1到10的数字，=6不现实</button>
+</body>
+</html>
